@@ -1,0 +1,720 @@
+*Heading
+** testing the general traction features of 2-d elements
+*Preprint, echo=NO, model=NO, history=NO, contact=NO
+**
+** PARTS
+**
+*Part, name=Part-1
+*End Part
+**
+** ASSEMBLY
+**
+*Assembly, name=Assembly
+**  
+*Instance, name=Part-1-1, part=Part-1
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,          0.5,          0.5
+       4,         -0.5,          0.5
+*Element, type=CPS3
+ 1, 1, 2, 4
+ 2, 4, 2, 3
+*Node
+       5,           0.,           0.,           0.
+*Nset, nset=Part-1-1-RefPt_, internal
+ 5, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1, 2
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-1-2, part=Part-1
+ 	   0.,           2.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,          0.5,          0.5
+       4,         -0.5,          0.5
+*Element, type=CPE3
+ 1, 1, 2, 4
+ 2, 4, 2, 3
+*Node
+       5,           0.,           0.,           0.
+*Nset, nset=Part-1-1-1-2-RefPt_, internal
+ 5, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1, 2
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-2-1, part=Part-1
+ 	   2.,           0.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,         -0.5,          0.5
+       4,          0.5,          0.5
+*Element, type=CPS4
+ 1, 1, 2, 4, 3
+*Node
+       5,           0.,           0.,           0.
+*Nset, nset=Part-1-1-2-1-RefPt_, internal
+ 5, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1,
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-2-2, part=Part-1
+ 	   2.,           2.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,         -0.5,          0.5
+       4,          0.5,          0.5
+*Element, type=CPE4
+ 1, 1, 2, 4, 3
+*Node
+       5,           0.,           0.,           0.
+*Nset, nset=Part-1-1-2-2-RefPt_, internal
+ 5, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1,
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-3-1, part=Part-1
+ 	   4.,           0.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,          0.5,          0.5
+       4,         -0.5,          0.5
+       5,           0.,         -0.5
+       6,           0.,           0.
+       7,         -0.5,           0.
+       8,          0.5,           0.
+       9,           0.,          0.5
+*Element, type=CPS6
+ 1, 1, 2, 4, 5, 6, 7
+ 2, 4, 2, 3, 6, 8, 9
+*Node
+      10,           0.,           0.,           0.
+*Nset, nset=Part-1-1-3-1-RefPt_, internal
+ 10, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1, 2
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-3-2, part=Part-1
+ 	   4.,           2.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,          0.5,          0.5
+       4,         -0.5,          0.5
+       5,           0.,         -0.5
+       6,           0.,           0.
+       7,         -0.5,           0.
+       8,          0.5,           0.
+       9,           0.,          0.5
+*Element, type=CPE6
+ 1, 1, 2, 4, 5, 6, 7
+ 2, 4, 2, 3, 6, 8, 9
+*Node
+      10,           0.,           0.,           0.
+*Nset, nset=Part-1-1-3-2-RefPt_, internal
+ 10, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1, 2
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-4-1, part=Part-1
+ 	   6.,           0.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,          0.5,          0.5
+       4,         -0.5,          0.5
+       5,           0.,         -0.5
+       6,           0.,           0.
+       7,         -0.5,           0.
+       8,          0.5,           0.
+       9,           0.,          0.5
+*Element, type=CPS6M
+ 1, 1, 2, 4, 5, 6, 7
+ 2, 4, 2, 3, 6, 8, 9
+*Node
+      10,           0.,           0.,           0.
+*Nset, nset=Part-1-1-4-1-RefPt_, internal
+ 10, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1, 2
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-4-2, part=Part-1
+ 	   6.,           2.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,          0.5,          0.5
+       4,         -0.5,          0.5
+       5,           0.,         -0.5
+       6,           0.,           0.
+       7,         -0.5,           0.
+       8,          0.5,           0.
+       9,           0.,          0.5
+*Element, type=CPE6M
+ 1, 1, 2, 4, 5, 6, 7
+ 2, 4, 2, 3, 6, 8, 9
+*Node
+      10,           0.,           0.,           0.
+*Nset, nset=Part-1-1-4-2-RefPt_, internal
+ 10, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1, 2
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-5-1, part=Part-1
+ 	   8.,           0.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,         -0.5,          0.5
+       4,          0.5,          0.5
+       5,           0.,         -0.5
+       6,          0.5,           0.
+       7,           0.,          0.5
+       8,         -0.5,           0.
+*Element, type=CPS8
+ 1, 1, 2, 4, 3, 5, 6, 7, 8
+*Node
+       9,           0.,           0.,           0.
+*Nset, nset=Part-1-1-5-1-RefPt_, internal
+ 9, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1,
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+**  
+*Instance, name=Part-1-1-5-2, part=Part-1
+ 	   8.,           2.,           0.
+*Node
+       1,         -0.5,         -0.5
+       2,          0.5,         -0.5
+       3,         -0.5,          0.5
+       4,          0.5,          0.5
+       5,           0.,         -0.5
+       6,          0.5,           0.
+       7,           0.,          0.5
+       8,         -0.5,           0.
+*Element, type=CPE8
+ 1, 1, 2, 4, 3, 5, 6, 7, 8
+*Node
+       9,           0.,           0.,           0.
+*Nset, nset=Part-1-1-5-2-RefPt_, internal
+ 9, 
+** Region: (Section-1:Picked)
+*Elset, elset=_PickedSet3, internal
+  1,
+** Section: Section-1
+*Solid Section, elset=_PickedSet3, material=Material-1
+ 1.,
+*End Instance
+*Nset, nset=refCoupNodes, instance=Part-1-1-1-2
+  5,
+*Nset, nset=refCoupNodes, instance=Part-1-1-2-2
+  5,
+*Nset, nset=refCoupNodes, instance=Part-1-1-3-2
+ 10,
+*Nset, nset=refCoupNodes, instance=Part-1-1-4-2
+ 10,
+*Nset, nset=refCoupNodes, instance=Part-1-1-5-2
+  9,
+*Nset, nset=refCoupNodes, instance=Part-1-1
+  5,
+*Nset, nset=refCoupNodes, instance=Part-1-1-3-1
+ 10,
+*Nset, nset=refCoupNodes, instance=Part-1-1-5-1
+  9,
+*Nset, nset=refCoupNodes, instance=Part-1-1-2-1
+  5,
+*Nset, nset=refCoupNodes, instance=Part-1-1-4-1
+ 10,
+*Nset, nset=_PickedSet27, internal, instance=Part-1-1-1-2, generate
+  1,  4,  1
+*Nset, nset=_PickedSet28, internal, instance=Part-1-1-1-2
+  5,
+*Nset, nset=_PickedSet29, internal, instance=Part-1-1-2-2, generate
+  1,  4,  1
+*Nset, nset=_PickedSet30, internal, instance=Part-1-1-2-2
+  5,
+*Nset, nset=_PickedSet31, internal, instance=Part-1-1-3-2, generate
+  1,  4,  1
+*Nset, nset=_PickedSet32, internal, instance=Part-1-1-3-2
+ 10,
+*Nset, nset=_PickedSet33, internal, instance=Part-1-1-4-2, generate
+  1,  4,  1
+*Nset, nset=_PickedSet34, internal, instance=Part-1-1-4-2
+ 10,
+*Nset, nset=_PickedSet35, internal, instance=Part-1-1-5-2, generate
+  1,  4,  1
+*Nset, nset=_PickedSet36, internal, instance=Part-1-1-5-2
+  9,
+*Nset, nset=_PickedSet37, internal, instance=Part-1-1, generate
+  1,  4,  1
+*Nset, nset=_PickedSet38, internal, instance=Part-1-1
+  5,
+*Nset, nset=_PickedSet39, internal, instance=Part-1-1-2-1, generate
+  1,  4,  1
+*Nset, nset=_PickedSet40, internal, instance=Part-1-1-2-1
+  5,
+*Nset, nset=_PickedSet41, internal, instance=Part-1-1-3-1, generate
+  1,  4,  1
+*Nset, nset=_PickedSet42, internal, instance=Part-1-1-3-1
+ 10,
+*Nset, nset=_PickedSet43, internal, instance=Part-1-1-4-1, generate
+  1,  4,  1
+*Nset, nset=_PickedSet44, internal, instance=Part-1-1-4-1
+ 10,
+*Nset, nset=_PickedSet45, internal, instance=Part-1-1-5-1, generate
+  1,  4,  1
+*Nset, nset=_PickedSet46, internal, instance=Part-1-1-5-1
+  9,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1
+  2,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-1-2
+  2,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-2-2
+  1,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-4-2
+  2,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-3-2
+  2,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-5-2
+  1,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-2-1
+  1,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-3-1
+  2,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-5-1
+  1,
+*Elset, elset=SurfPosX_S2, internal, instance=Part-1-1-4-1
+  2,
+*Surface, type=ELEMENT, name=surfPosX
+ SurfPosX_S2, S2
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1
+  2,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-1-2
+  2,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-2-2
+  1,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-4-2
+  2,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-3-2
+  2,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-5-2
+  1,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-2-1
+  1,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-3-1
+  2,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-5-1
+  1,
+*Elset, elset=SurfPosY_S3, internal, instance=Part-1-1-4-1
+  2,
+*Surface, type=ELEMENT, name=surfPosY
+ SurfPosY_S3, S3
+*Elset, elset=SurfNegX_S3, internal, instance=Part-1-1
+  1,
+*Elset, elset=SurfNegX_S3, internal, instance=Part-1-1-1-2
+  1,
+*Elset, elset=SurfNegX_S3, internal, instance=Part-1-1-4-2
+  1,
+*Elset, elset=SurfNegX_S3, internal, instance=Part-1-1-3-2
+  1,
+*Elset, elset=SurfNegX_S3, internal, instance=Part-1-1-3-1
+  1,
+*Elset, elset=SurfNegX_S3, internal, instance=Part-1-1-4-1
+  1,
+*Elset, elset=SurfNegX_S4, internal, instance=Part-1-1-2-2
+  1,
+*Elset, elset=SurfNegX_S4, internal, instance=Part-1-1-5-2
+  1,
+*Elset, elset=SurfNegX_S4, internal, instance=Part-1-1-2-1
+  1,
+*Elset, elset=SurfNegX_S4, internal, instance=Part-1-1-5-1
+  1,
+*Surface, type=ELEMENT, name=surfNegX
+ SurfNegX_S3, S3
+ SurfNegX_S4, S4
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-1-2
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-2-2
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-4-2
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-3-2
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-5-2
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-2-1
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-3-1
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-5-1
+  1,
+*Elset, elset=SurfNegY_S1, internal, instance=Part-1-1-4-1
+  1,
+*Surface, type=ELEMENT, name=surfNegY
+ SurfNegY_S1, S1
+*Surface, type=NODE, name=_PickedSet27_CNS_, internal
+ _PickedSet27, 1.
+*Surface, type=NODE, name=_PickedSet45_CNS_, internal
+ _PickedSet45, 1.
+*Surface, type=NODE, name=_PickedSet29_CNS_, internal
+ _PickedSet29, 1.
+*Surface, type=NODE, name=_PickedSet31_CNS_, internal
+ _PickedSet31, 1.
+*Surface, type=NODE, name=_PickedSet33_CNS_, internal
+ _PickedSet33, 1.
+*Surface, type=NODE, name=_PickedSet35_CNS_, internal
+ _PickedSet35, 1.
+*Surface, type=NODE, name=_PickedSet37_CNS_, internal
+ _PickedSet37, 1.
+*Surface, type=NODE, name=_PickedSet39_CNS_, internal
+ _PickedSet39, 1.
+*Surface, type=NODE, name=_PickedSet41_CNS_, internal
+ _PickedSet41, 1.
+*Surface, type=NODE, name=_PickedSet43_CNS_, internal
+ _PickedSet43, 1.
+** Constraint: Constraint-1
+*Coupling, constraint name=Constraint-1, ref node=_PickedSet28, surface=_PickedSet27_CNS_
+*Distributing, weighting method=UNIFORM
+** Constraint: Constraint-10
+*Coupling, constraint name=Constraint-10, ref node=_PickedSet46, surface=_PickedSet45_CNS_
+*Distributing, weighting method=UNIFORM
+** Constraint: Constraint-2
+*Coupling, constraint name=Constraint-2, ref node=_PickedSet30, surface=_PickedSet29_CNS_
+*Kinematic
+** Constraint: Constraint-3
+*Coupling, constraint name=Constraint-3, ref node=_PickedSet32, surface=_PickedSet31_CNS_
+*Distributing, weighting method=UNIFORM
+** Constraint: Constraint-4
+*Coupling, constraint name=Constraint-4, ref node=_PickedSet34, surface=_PickedSet33_CNS_
+*Distributing, weighting method=UNIFORM
+** Constraint: Constraint-5
+*Coupling, constraint name=Constraint-5, ref node=_PickedSet36, surface=_PickedSet35_CNS_
+*Distributing, weighting method=UNIFORM
+** Constraint: Constraint-6
+*Coupling, constraint name=Constraint-6, ref node=_PickedSet38, surface=_PickedSet37_CNS_
+*Distributing, weighting method=UNIFORM
+** Constraint: Constraint-7
+*Coupling, constraint name=Constraint-7, ref node=_PickedSet40, surface=_PickedSet39_CNS_
+*Distributing, weighting method=UNIFORM
+** Constraint: Constraint-8
+*Coupling, constraint name=Constraint-8, ref node=_PickedSet42, surface=_PickedSet41_CNS_
+*Distributing, weighting method=UNIFORM
+** Constraint: Constraint-9
+*Coupling, constraint name=Constraint-9, ref node=_PickedSet44, surface=_PickedSet43_CNS_
+*Distributing, weighting method=UNIFORM
+*End Assembly
+** 
+** MATERIALS
+** 
+*Material, name=Material-1
+*Elastic
+ 1000., 0.3
+*Boundary
+ refCoupNodes, 1, 2
+ refCoupNodes, 6, 6
+** ----------------------------------------------------------------
+** 
+** STEP: Step-1
+** 
+*Step, name=LoadPosX, perturbation
+  Traction Load Test Load Cases
+*Static
+*Output, field
+*Node Output, Nset=refCoupNodes
+  RF,
+*El Print, freq=0
+*Node Print, freq=1, nset=refCoupNodes
+  RF,
+*Load Case, name=TRVEC_PX_01_DS
+*Dsload
+  SurfPosX, TRVEC, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRVEC_PX_10_DS
+*Dsload
+  SurfPosX, TRVEC, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRVEC_PX_11_DS
+*Dsload
+  SurfPosX, TRVEC, 1.41421356,  1., 1.
+*End Load Case
+*Load Case, name=TRSHR_PX_01_DS
+*Dsload
+  SurfPosX, TRSHR, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRSHR_PX_10_DS
+*Dsload
+  SurfPosX, TRSHR, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRSHR_PX_11_DS
+*Dsload
+  SurfPosX, TRSHR, 1.,  1., 1.
+*End Load Case
+*Load Case, name=TRVEC_PX_01_D
+*Dload
+  SurfPosX_S2, TRVEC2, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRVEC_PX_10_D
+*Dload
+  SurfPosX_S2, TRVEC2, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRVEC_PX_11_D
+*Dload
+  SurfPosX_S2, TRVEC2, 1.41421356,  1., 1.
+*End Load Case
+*Load Case, name=TRSHR_PX_01_D
+*Dload
+  SurfPosX_S2, TRSHR2, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRSHR_PX_10_D
+*Dload
+  SurfPosX_S2, TRSHR2, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRSHR_PX_11_D
+*Dload
+  SurfPosX_S2, TRSHR2, 1.0,  1., 1.
+*End Load Case
+*OUTPUT,FIELD
+*ELEMENT OUTPUT
+ TRNOR,TRSHR
+*End Step
+**
+** STEP: Step-2
+** 
+*Step, name=LoadPosY, perturbation
+  Traction Load Test Load Cases
+*Static
+*Load Case, name=TRVEC_PY_01_DS
+*Dsload
+  SurfPosY, TRVEC, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRVEC_PY_10_DS
+*Dsload
+  SurfPosY, TRVEC, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRVEC_PY_11_DS
+*Dsload
+  SurfPosY, TRVEC, 1.41421356,  1., 1.
+*End Load Case
+*Load Case, name=TRSHR_PY_01_DS
+*Dsload
+  SurfPosY, TRSHR, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRSHR_PY_10_DS
+*Dsload
+  SurfPosY, TRSHR, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRSHR_PY_11_DS
+*Dsload
+  SurfPosY, TRSHR, 1.0,  1., 1.
+*End Load Case
+*Load Case, name=TRVEC_PY_01_D
+*Dload
+  SurfPosY_S3, TRVEC3, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRVEC_PY_10_D
+*Dload
+  SurfPosY_S3, TRVEC3, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRVEC_PY_11_D
+*Dload
+  SurfPosY_S3, TRVEC3, 1.41421356,  1., 1.
+*End Load Case
+*Load Case, name=TRSHR_PY_01_D
+*Dload
+  SurfPosY_S3, TRSHR3, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRSHR_PY_10_D
+*Dload
+  SurfPosY_S3, TRSHR3, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRSHR_PY_11_D
+*Dload
+  SurfPosY_S3, TRSHR3, 1.0,  1., 1.
+*End Load Case
+*OUTPUT,FIELD
+*ELEMENT OUTPUT
+ TRNOR,TRSHR
+*End Step
+** STEP: Step-3
+** 
+*Step, name=LoadNegX, perturbation
+  Traction Load Test Load Cases
+*Static
+*Output, field
+*Node Output, Nset=refCoupNodes
+  RF,
+*El Print, freq=0
+*Node Print, freq=1, nset=refCoupNodes
+  RF,
+*Load Case, name=TRVEC_NX_01_DS
+*Dsload
+  SurfNegX, TRVEC, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRVEC_NX_10_DS
+*Dsload
+  SurfNegX, TRVEC, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRVEC_NX_11_DS
+*Dsload
+  SurfNegX, TRVEC, 1.41421356,  1., 1.
+*End Load Case
+*Load Case, name=TRSHR_NX_01_DS
+*Dsload
+  SurfNegX, TRSHR, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRSHR_NX_10_DS
+*Dsload
+  SurfNegX, TRSHR, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRSHR_NX_11_DS
+*Dsload
+  SurfNegX, TRSHR, 1.,  1., 1.
+*End Load Case
+*Load Case, name=TRVEC_NX_01_D
+*Dload
+  SurfNegX_S3, TRVEC3, 1.,  0., 1.
+  SurfNegX_S4, TRVEC4, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRVEC_NX_10_D
+*Dload
+  SurfNegX_S3, TRVEC3, 1.,  1., 0.
+  SurfNegX_S4, TRVEC4, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRVEC_NX_11_D
+*Dload
+  SurfNegX_S3, TRVEC3, 1.41421356,  1., 1.
+  SurfNegX_S4, TRVEC4, 1.41421356,  1., 1.
+*End Load Case
+*Load Case, name=TRSHR_NX_01_D
+*Dload
+  SurfNegX_S3, TRSHR3, 1.,  0., 1.
+  SurfNegX_S4, TRSHR4, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRSHR_NX_10_D
+*Dload
+  SurfNegX_S3, TRSHR3, 1.,  1., 0.
+  SurfNegX_S4, TRSHR4, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRSHR_NX_11_D
+*Dload
+  SurfNegX_S3, TRSHR3, 1.0,  1., 1.
+  SurfNegX_S4, TRSHR4, 1.,   1., 1.
+*End Load Case
+*OUTPUT,FIELD
+*ELEMENT OUTPUT
+ TRNOR,TRSHR
+*End Step
+** 
+** STEP: Step-4
+** 
+*Step, name=LoadNegY, perturbation
+  Traction Load Test Load Cases
+*Static
+*Output, field
+*Node Output, Nset=refCoupNodes
+  RF,
+*El Print, freq=0
+*Node Print, freq=1, nset=refCoupNodes
+  RF,
+*Load Case, name=TRVEC_NY_01_DS
+*Dsload
+  SurfNegY, TRVEC, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRVEC_NY_10_DS
+*Dsload
+  SurfNegY, TRVEC, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRVEC_NY_11_DS
+*Dsload
+  SurfNegY, TRVEC, 1.41421356,  1., 1.
+*End Load Case
+*Load Case, name=TRSHR_NY_01_DS
+*Dsload
+  SurfNegY, TRSHR, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRSHR_NY_10_DS
+*Dsload
+  SurfNegY, TRSHR, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRSHR_NY_11_DS
+*Dsload
+  SurfNegY, TRSHR, 1.,  1., 1.
+*End Load Case
+*Load Case, name=TRVEC_NY_01_D
+*Dload
+  SurfNegY_S1, TRVEC1, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRVEC_NY_10_D
+*Dload
+  SurfNegY_S1, TRVEC1, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRVEC_NY_11_D
+*Dload
+  SurfNegY_S1, TRVEC1, 1.41421356,  1., 1.
+*End Load Case
+*Load Case, name=TRSHR_NY_01_D
+*Dload
+  SurfNegY_S1, TRSHR1, 1.,  0., 1.
+*End Load Case
+*Load Case, name=TRSHR_NY_10_D
+*Dload
+  SurfNegY_S1, TRSHR1, 1.,  1., 0.
+*End Load Case
+*Load Case, name=TRSHR_NY_11_D
+*Dload
+  SurfNegY_S1, TRSHR1, 1.0,  1., 1.
+*End Load Case
+*OUTPUT,FIELD
+*ELEMENT OUTPUT
+ TRNOR,TRSHR
+*End Step
