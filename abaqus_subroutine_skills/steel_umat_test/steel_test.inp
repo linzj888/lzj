@@ -1,0 +1,52 @@
+*Heading
+Steel plasticity with failure test
+
+*Preprint, echo=NO, model=NO, history=NO
+
+*Part, name=Bar
+*Node
+1, 0.0, 0.0, 0.0
+2, 100.0, 0.0, 0.0
+3, 0.0, 10.0, 0.0
+4, 100.0, 10.0, 0.0
+5, 0.0, 0.0, 10.0
+6, 100.0, 0.0, 10.0
+7, 0.0, 10.0, 10.0
+8, 100.0, 10.0, 10.0
+*Element, type=C3D8
+1, 1, 2, 4, 3, 5, 6, 8, 7
+*Nset, nset=FixedEnd, internal, generate
+1, 4, 1
+*Nset, nset=LoadEnd, internal, generate
+5, 8, 1
+
+*Elset, elset=AllElements, internal, generate
+1, 1, 1
+
+*Material, name=Steel_Plastic_Failure
+*User Material, constants=6
+210000.0, 0.3, 250.0, 500.0, 0.3, 0.2
+*Depvar
+2
+
+*Solid Section, elset=AllElements, material=Steel_Plastic_Failure
+
+*End Part
+
+*Assembly, name=Assembly
+*Instance, name=Bar-1, part=Bar
+*End Instance
+*Nset, nset=FixedEnd, internal, instance=Bar-1
+1, 2, 3, 4
+*Nset, nset=LoadEnd, internal, instance=Bar-1
+5, 6, 7, 8
+
+*Step, name=Tension, nlgeom=YES
+*Static
+1.0, 1.0, 1e-05, 1.0
+*Boundary
+FixedEnd, 1, 3, 0.0
+LoadEnd, 1, 1, 5.0
+*Output, field, variable=PRESELECT
+*Output, history, variable=PRESELECT
+*End Step
