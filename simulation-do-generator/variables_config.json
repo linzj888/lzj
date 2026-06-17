@@ -1,0 +1,26 @@
+{
+  "software": "ABAQUS",
+  "variables": [
+    {
+      "name": "Geom_RebarArea",
+      "current_value": 1e-6,
+      "description": "Rebar Cross-sectional Area",
+      "type": "geometry",
+      "suggested_range": {
+        "min": 1e-6,
+        "max": 10e-6
+      }
+    },
+    {
+      "name": "Fluid_CavityPressure",
+      "current_value": 506600.0,
+      "description": "Cavity Inflation Pressure",
+      "type": "boundary",
+      "suggested_range": {
+        "min": 300000.0,
+        "max": 1000000.0
+      }
+    }
+  ],
+  "total_variables": 2
+}
